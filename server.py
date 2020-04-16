@@ -17,7 +17,7 @@ class general_exposure(Resource):
         for ge in genExps:
             results.append(ge)
         return {
-            "results": [r.json() for r in results]
+            "results": [r for r in results]
             }
     
 

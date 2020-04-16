@@ -10,6 +10,7 @@ connection = db.Connection(config.db["host"], config.db["db"], config.db["user"]
 def index():
     results = []
     genExps = connection.read("SELECT ingredient_id, ingredient_name, general_exposure_count, general_exposure FROM public.general_exposures limit 50;")
+    
     for ge in genExps:
         results.append(ge)
     return {

@@ -4,7 +4,7 @@ from flask_restful import Resource, Api
 from json import dumps
 import db
 
-connection = db.Connection("hl-drug-monitor.choxmvghdfxg.us-east-2.rds.amazonaws.com", "HugheyLabDrugMonitor", "postgres", "mysecretpassword")
+connection = db.Connection(config.db["host"], config.db["db"], config.db["user"], config.db["password"])
 app = Flask(__name__)
 api = Api(app)
 

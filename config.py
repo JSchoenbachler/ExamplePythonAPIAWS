@@ -34,7 +34,7 @@ host = "https://api.url_goes_in_here.org"
 # with Bottle's default. The default can be handy for development because
 # it includes the option to reload the application any time there is a
 # code change.
-use_prod_webserver = True
+use_prod_webserver = False
 
 # how many search results are returned at a time
 default_page_size = 20

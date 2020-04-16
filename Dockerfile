@@ -1,4 +1,5 @@
-FROM python:slim
+FROM python:3.6-alpine
+RUN apk update && apk add postgresql-dev gcc python3-dev musl-dev
 # NOTE: The python:alpine image would be lovely
 # to use here, but it isn't compatible with the
 # postgres SDK, per this issue:

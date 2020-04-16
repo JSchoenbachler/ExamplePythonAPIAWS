@@ -19,7 +19,8 @@ LABEL org.label-schema.version = "0.7.0"
 COPY requirements.txt /
 RUN pip install -r /requirements.txt
 
-RUN apt install -y curl
+RUN apt-get update
+RUN apt-get install -y curl
 
 ADD . /app
 WORKDIR /app

@@ -19,7 +19,6 @@ LABEL org.label-schema.version = "0.7.0"
 COPY requirements.txt /
 RUN pip install -r /requirements.txt
 
-RUN apk update
 RUN apk add curl
 
 ADD . /app

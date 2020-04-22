@@ -24,6 +24,6 @@ RUN apk add curl
 ADD . /app
 WORKDIR /app
 
-HEALTHCHECK --start-period=30s --interval=120s --timeout=15s CMD curl --fail http://localhost/v1/general_exposure || exit 1
+HEALTHCHECK --start-period=30s --interval=120s --timeout=15s CMD curl --fail http://localhost/general_exposure || exit 1
 
 CMD ["python", "server.py"]
